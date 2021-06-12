@@ -1,0 +1,1 @@
+<br><h4> Ingreaste la palabra: <?php echo $nombre ?></h4>

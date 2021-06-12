@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+
+    <title>Document</title>
+</head>
+
+<body>
+    <label for="n1">Num 1</label>
+    <input id="n1" class="n1" type="text">
+    <br>
+    <br>
+    <br>
+    <label for="n2">Num 2</label>
+    <input id="n2" class="n2" type="text">
+    <br>
+    <br>
+    <br>
+    <label for="n3">Num 3</label>
+    <input id="n3" class="n3" type="text">
+    <br>
+    <br>
+    <br>
+    <label for="n4">Num 4</label>
+    <input id="n4" class="n4" type="text">
+    <br>
+    <br>
+    <br>
+    <label for="n5">Num 5</label>
+    <input id="n5" class="n5" type="text">
+    <br>
+    <br>
+    <br>
+    <button onclick="Buscar()">buscar</button>
+    <h4 id="salida"></h4>
+</body>
+
+</html>
+<script>
+    function Buscar() {
+
+        num = [13, 90, 8];
+        array = ['', '', '', '', ''];
+        i = 0;
+
+        var n1 = $('#n1').val();
+        var n2 = $('#n2').val();
+        var n3 = $('#n3').val();
+        var n4 = $('#n4').val();
+        var n5 = $('#n5').val();
+
+        num.forEach(element => {
+            if (n1 == element) {
+                array[i] = n1;
+                i++;
+            }
+            if (n2 == element) {
+                array[i] = n2;
+                i++;
+            }
+            if (n3 == element) {
+                array[i] = n3;
+                i++;
+            }
+            if (n4 == element) {
+                array[i] = n4;
+                i++;
+            }
+            if (n5 == element) {
+                array[i] = n5;
+                i++;
+            }
+        });
+
+
+        $('#salida').html('se encontro ' + array);
+    }
+</script>
